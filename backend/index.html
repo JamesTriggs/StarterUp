@@ -10,6 +10,18 @@
     <link href="assets/stylesheets/application-a07755f5.css" rel="stylesheet" type="text/css" /><link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/images/favicon.ico" rel="icon" type="image/ico" />
 
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+   <script src="node_modules/core-js/client/shim.min.js"></script>
+   <script src="node_modules/zone.js/dist/zone.js"></script>
+   <script src="node_modules/reflect-metadata/Reflect.js"></script>
+   <script src="node_modules/systemjs/dist/system.src.js"></script>
+   <!-- 2. Configure SystemJS -->
+   <script src="systemjs.config.js"></script>
+   <script>
+     System.import('app').catch(function(err){ console.error(err); });
+   </script>
+
   </head>
   <body class='login'>
     <div class='wrapper'>
@@ -20,7 +32,9 @@
               <div class='logo-icon'>
                 <i class='icon-beer'></i>
               </div>
-              Starter Up
+              <starter-up>
+                Starter Up
+              </starter-up>
             </h1>
           </div>
         </div>
